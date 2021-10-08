@@ -8,8 +8,7 @@
         v-for="item in estabelecimentos"
         v-bind:key="item._id"
       >
-        <span
-          ><strong>Estabelecimento do {{ item.razaoSocial }}</strong></span
+        <span><strong>Estabelecimento do {{ item.razaoSocial }}</strong></span
         ><br />
         <span>Telefone: {{ item.telefone }}</span>
         <p>e-mail: {{ item.email }}</p>

@@ -21,6 +21,12 @@ router.get('/listar', async(req, res) => {
     res.json(pedido)
 })
 
+router.get('/listar/estabelecimento/:id', async (req, res) => {
+    let id = req.params.id
+    let pedidos = await pedidoService.listPedidoPorEstabelecimento(id)
+    res.json(pedidos)
+})
+
 router.get('/:id', async(req, res) => {
     let id = req.params.id
     let pedido = await pedidoService.Pedido(id)

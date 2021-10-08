@@ -14,7 +14,7 @@ module.exports = class ProdutoService {
         return await Produto.find()
     }
     
-    async produtoId(id) {
+    async produto(id) {
         return await Produto.findById(id)
     }
 

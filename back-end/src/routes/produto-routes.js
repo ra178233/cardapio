@@ -28,7 +28,7 @@ router.get('/listar/estabelecimento/:id', async(req, res) => {
 
 router.get('/:id', async(req, res) => {
     let id = req.params.id
-    let produtos = await produtoService.produtoId(id)
+    let produtos = await produtoService.produto(id)
     res.json(produtos)
 })
 

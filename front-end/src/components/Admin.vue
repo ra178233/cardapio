@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    {{ estabelecimento.razaoSocial }}
+    <h1>Estabelecimento do {{ estabelecimento.razaoSocial }}</h1>
     <br />
-    <button @click="verPedidos" type="button" class="btn btn-primary">
+    <button @click="verPedidos" type="submit" class="btn btn-primary">
       Ver pedidos</button
     ><br />
     <br />
-    <button v-on:click="verProdutos" type="submit" class="btn btn-primary">
+    <button @click="verProdutos" type="submit" class="btn btn-primary">
       Ver produtos
     </button>
   </div>
@@ -30,6 +30,10 @@ export default {
       let id = this.$route.params.id;
       this.$router.push({ path: `/verPedidos/${id}` });
     },
+    verProdutos() {
+      let id = this.$route.params.id;
+      this.$router.push({ path: `/verProdutos/${id}` });
+    },
   },
 };
-</script>   
+</script>

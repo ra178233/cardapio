@@ -8,6 +8,8 @@ import Produtos from './components/Produtos.vue'
 import Pedido from './components/Pedido.vue'
 import PedidoRealizado from './components/PedidoRealizado.vue'
 import VerPedidos from './components/VerPedidos.vue'
+import VerProdutos from './components/VerProdutos.vue'
+
 
 Vue.use(VueRouter)
 
@@ -45,6 +47,10 @@ const router = new VueRouter({
     {
       path: '/verPedidos/:id',
       component: VerPedidos
+    },
+    {
+      path: '/verProdutos/:id',
+      component: VerProdutos
     }  
   ]
 })
